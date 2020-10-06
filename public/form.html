@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset = "UTF-8">
+	<link rel = "stylesheet" href="style.css">
+	<title> My Form </title>
+</head>
+<body>
+	<header>
+		<h1>Employee Database</h1>
+	</header>
+
+
+
+	<form action="/add" method="POST">
+		<fieldset>
+				<h3>Add new employee</h3>
+				<label>Employee ID</label>
+				<input type ="text" id = 'empID' name="id" placeholder="1,2,3..." required>
+				<br><br>
+
+				<label>Name</label>
+				<input type="text" id = "name" name="name" placeholder="Tom Cruise" required>
+				<br><br>
+
+				<button type ="reset">Reset</button>
+				<button type ="submit">Submit</button>
+		</fieldset>
+	</form>
+	<form action="/view" method="POST">
+		<fieldset>
+				<h3>View an employee</h3>
+				<label>Employee ID</label>
+				<input type="text" id="empID" name="id" placeholder="1,2,3..." required>
+				<br><br>
+				<button type ="reset">Reset</button>
+				<button type ="submit">Submit</button>
+				<br><br><br>
+		</fieldset>
+	</form>
+	<form action="/update" method="POST">
+		<fieldset>
+				<h3>Update an employee</h3>
+				<label>Employee ID</label>
+				<input type ="text" id = 'empID' name="id" placeholder="1,2,3..." required>
+				<br><br>
+
+				<label>New Name</label>
+				<input type="text" id = "name" name="name" placeholder="Maverick" required>
+				<br><br>
+
+				<button type ="reset">Reset</button>
+				<button type ="submit">Submit</button>
+		</fieldset>
+	</form>
+	<form action="/delete" method="POST">
+		<fieldset>
+				<h3>Delete an employee</h3>
+				<label>Employee ID</label>
+				<input type ="text" id = 'empID' name="id" placeholder="1,2,3..." required>
+				<br><br>
+
+				<button type ="reset">Reset</button>
+				<button type ="submit">Submit</button>
+				<br><br><br>
+		</fieldset>
+	</form>
+	<footer>
+		<hr>
+		<h4>Please enter 'http://localhost:3000/close' to close the database connection before closing this window</h4>
+	</footer>
+</body>
+</html>
