@@ -3,6 +3,7 @@ var express = require('express');
 var http = require('http');
 var path = require("path");
 var bodyParser = require('body-parser');
+var helmet = require('helmet');
 
 var app = express();
 var server = http.createServer(app);
@@ -13,7 +14,7 @@ var db = new sqlite3.Database('./database/employees.db');
 
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static(path.join(__dirname,'./public')));
-
+app.use(helmet());
 
 db.run('CREATE TABLE IF NOT EXISTS emp(id TEXT, name TEXT)');
 
